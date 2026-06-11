@@ -1,0 +1,180 @@
+<style>
+    body {
+        font-family: Arial;
+        margin: 0;
+    }
+
+    /* Conteneur global */
+    .container {
+        display: flex;
+    }
+
+    /* Menu gauche */
+    .sidebar {
+        width: 200px;
+        background: #f1f1f1;
+        padding: 10px;
+        border-right: 1px solid #ccc;
+    }
+
+    .sidebar button {
+        display: block;
+        width: 100%;
+        padding: 12px;
+        border: none;
+        background: none;
+        text-align: left;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    .sidebar button:hover {
+        background-color: #ddd;
+    }
+
+    .sidebar button.active {
+        background-color: #04AA6D;
+        color: white;
+    }
+
+    /* Contenu */
+    .content {
+        flex: 1;
+        padding: 20px;
+    }
+
+    .tabcontent {
+        display: none;
+    }
+</style>
+
+
+
+
+
+
+/* RESET SIMPLE */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+
+/* HEADER */
+header {
+    /*position:fixed*/;
+    background: linear-gradient(135deg, #2f5d50, #4a7c6a);
+    color: white;
+    text-align: center;
+    padding: 40px 20px;    
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+header p {
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+/* NAVIGATION */
+nav {
+    background-color: white;
+    text-align: center;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #2f5d50;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #4a7c6a;
+}
+
+/* SECTIONS */
+section {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+}
+
+/* TITRES */
+h2 {
+    color: #2f5d50;
+}
+
+/* LISTES */
+ul {
+    padding-left: 20px;
+}
+
+/* GALERIE PHOTOS */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.gallery img {
+    width: 300px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* BOUTONS */
+.btn {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #2f5d50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background-color: #4a7c6a;
+}
+
+/* CONTACT */
+.contact p {
+    margin: 5px 0;
+}
+
+/* FOOTER */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* RESPONSIVE (mobile) */
+@media (max-width: 768px) {
+    .gallery img {
+        width: 100%;
+    }
+
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+
+
+
+
