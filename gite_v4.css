@@ -26,13 +26,40 @@ header p {
     font-size: 1.2em;
 }
 
-/* NAVIGATION */
+/* NAVIGATION
 nav {
     background-color: white;
     text-align: center;
     padding: 15px;
     border-bottom: 1px solid #ddd;
+} */
+
+/* NAVIGATION*/
+nav {
+    /*display: inline-block;*/
+    display: inline-block;
+    padding: 12px 20px;    
+    background-color: #2f5d50;
+    color: white;
+    text-decoration: none;
+    /*border-radius: 5px;*/
+    border-radius: 50px;
+    margin-top: 10px;
+    /*font-size: 50px;*/
 }
+
+
+nav button {
+    font-size: 14px;          /* taille du texte */
+    padding: 10px 15px;
+    background-color: white;
+    color: #2f5d50;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+
 
 nav a {
     margin: 0 15px;
