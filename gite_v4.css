@@ -50,8 +50,9 @@ nav {
 
 
 nav button {
-    font-size: 14px;          /* taille du texte */
-    padding: 10px 15px;
+    font-size: 11px;          /* taille du texte */
+    /*padding: 10px 15px;*/
+    padding: 5px 10px;
     background-color: white;
     color: #2f5d50;
     border: none;
