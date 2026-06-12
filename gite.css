@@ -66,33 +66,36 @@ ul {
 
 /* GALERIE PHOTOS */
 .gallery {
-    display: flex;
+    /*display: flex;*/
     flex-wrap: wrap;
     gap: 15px;
 }
 
 .gallery img {
-    width: 300px;
+    width: 600px;
     border-radius: 10px;
     transition: transform 0.3s;
 }
 
 .gallery img:hover {
-    transform: scale(1.05);
+    /*transform: scale(1.05)*/;
+    transform: scale(1.50)
 }
 
 /* BOUTONS */
-.btn {
+.sidebar {
     display: inline-block;
-    padding: 12px 20px;
+    padding: 12px 20px;    
     background-color: #2f5d50;
     color: white;
     text-decoration: none;
-    border-radius: 5px;
+    /*border-radius: 5px;*/
+    border-radius: 50px;
     margin-top: 10px;
+    /*font-size: 100px;*/
 }
 
-.btn:hover {
+.sidebar:hover {
     background-color: #4a7c6a;
 }
 
@@ -119,7 +122,5 @@ footer {
         display: block;
         margin: 10px 0;
     }
-
-
 
 
