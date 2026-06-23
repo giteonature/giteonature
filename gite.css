@@ -9,7 +9,7 @@ body {
 
 /* HEADER */
 header {
-    /*position:fixed*/;
+    /*position:fixed;*/
     background: linear-gradient(135deg, #2f5d50, #4a7c6a);
     color: white;
     text-align: center;
@@ -18,7 +18,8 @@ header {
 
 header h1 {
     margin: 0;
-    font-size: 2.5em;
+    /*font-size: 2.5em;*/
+    font-size: 2em;
 }
 
 header p {
