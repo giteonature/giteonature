@@ -16,6 +16,18 @@ header {
     padding: 40px 20px;    
 }
 
+
+.logo {
+  background: url('terrasse.jpg') center/cover;
+  height: 400px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-shadow: 0 2px 8px black;
+}
+
+
 header h1 {
     margin: 0;
     /*font-size: 2.5em;*/
