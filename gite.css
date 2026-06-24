@@ -1,12 +1,95 @@
-/* RESET SIMPLE */
+/* RESET DE BASE */
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f8f8f8;
-    color: #333;
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #f5f7f5;
+  color: #333;
+}
+
+/* CONTENEUR */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 10px;
+}
+
+/* MENU */
+nav {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  /*background: #2e6f40;*/
+  background-color: #2f5d50;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+nav button {
+  background: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+nav button:hover {
+  background: #d4a373;
+  color: white;
+}
+
+/* TITRES */
+h1 {
+  text-align: center;
+  color: #2e6f40;
+}
+
+h2 {
+  color: #2e6f40;
+}
+
+/* BLOCS (effet carte) */
+section {
+  background: white;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* CONTENU CACHÉ ONGLETS */
+.tabcontent {
+  display: none;
+}
+
+/* GALERIE */
+.gallery {
+  /*display: flex;*/
+  flex-wrap: wrap;
+  gap: 15px;
+  /*justify-content: center;*/
+}
+
+.gallery img {
+  /*width: 300px*/;
+  width: 600px;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.gallery img:hover {
+  /*transform: scale(1.05);*/
+  transform: scale(1.50);
+}
+
+/* TEXTE */
+p {
+  line-height: 1.6;
 }
 
 
+file:///C:/Users/hmartins/Downloads/chambre2.jpg/hm*/
 /* HEADER */
 header {
     /*position:fixed;*/
@@ -16,7 +99,7 @@ header {
     padding: 40px 20px;    
 }
 
-
+/*hm*/
 .logo {
   background: url('terrasse.jpg') center/cover;
   height: 400px;
@@ -27,142 +110,18 @@ header {
   text-shadow: 0 2px 8px black;
 }
 
-
-header h1 {
-    margin: 0;
-    /*font-size: 2.5em;*/
-    font-size: 2em;
+.logo h1 {
+  color: white;
 }
 
-header p {
-    margin-top: 10px;
-    font-size: 1.2em;
-}
+.detail h1 {
+        background-color: #2f5d50;
+	/*background: #2e6f40;*/
+	color: white;
 
-/* NAVIGATION
-nav {
-    background-color: white;
-    text-align: center;
-    padding: 15px;
-    border-bottom: 1px solid #ddd;
-} */
-
-/* NAVIGATION*/
-nav {
-    /*display: inline-block;*/
-    display: inline-block;
-    padding: 12px 20px;    
-    background-color: #2f5d50;
-    color: white;
-    text-decoration: none;
-    /*border-radius: 5px;*/
-    border-radius: 50px;
-    margin-top: 10px;
-    /*font-size: 50px;*/
 }
 
 
-nav button {
-    font-size: 11px;          /* taille du texte */
-    /*padding: 10px 15px;*/
-    padding: 5px 10px;
-    background-color: white;
-    color: #2f5d50;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-}
-
-
-
-nav a {
-    margin: 0 15px;
-    text-decoration: none;
-    color: #2f5d50;
-    font-weight: bold;
-}
-
-nav a:hover {
-    color: #4a7c6a;
-}
-
-/* SECTIONS */
-section {
-    max-width: 1000px;
-    margin: 40px auto;
-    padding: 20px;
-    background: white;
-    border-radius: 10px;
-}
-
-/* TITRES */
-h2 {
-    color: #2f5d50;
-}
-
-/* LISTES */
-ul {
-    padding-left: 20px;
-}
-
-/* GALERIE PHOTOS */
-.gallery {
-    /*display: flex;*/
-    flex-wrap: wrap;
-    gap: 15px;
-}
-
-.gallery img {
-    width: 600px;
-    border-radius: 10px;
-    transition: transform 0.3s;
-}
-
-.gallery img:hover {
-    /*transform: scale(1.05)*/;
-    transform: scale(1.50)
-}
-
-/* BOUTONS */
-.sidebar {
-    display: inline-block;
-    padding: 12px 20px;    
-    background-color: #2f5d50;
-    color: white;
-    text-decoration: none;
-    /*border-radius: 5px;*/
-    border-radius: 50px;
-    margin-top: 10px;
-    /*font-size: 100px;*/
-}
-
-.sidebar:hover {
-    background-color: #4a7c6a;
-}
-
-/* CONTACT */
-.contact p {
-    margin: 5px 0;
-}
-
-/* FOOTER */
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 20px;
-}
-
-/* RESPONSIVE (mobile) */
-@media (max-width: 768px) {
-    .gallery img {
-        width: 100%;
-    }
-
-    nav a {
-        display: block;
-        margin: 10px 0;
-    }
 
 
 

@@ -1,0 +1,168 @@
+/* RESET SIMPLE */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+
+/* HEADER */
+header {
+    /*position:fixed;*/
+    background: linear-gradient(135deg, #2f5d50, #4a7c6a);
+    color: white;
+    text-align: center;
+    padding: 40px 20px;    
+}
+
+
+.logo {
+  background: url('terrasse.jpg') center/cover;
+  height: 400px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-shadow: 0 2px 8px black;
+}
+
+
+header h1 {
+    margin: 0;
+    /*font-size: 2.5em;*/
+    font-size: 2em;
+}
+
+header p {
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+/* NAVIGATION
+nav {
+    background-color: white;
+    text-align: center;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+} */
+
+/* NAVIGATION*/
+nav {
+    /*display: inline-block;*/
+    display: inline-block;
+    padding: 12px 20px;    
+    background-color: #2f5d50;
+    color: white;
+    text-decoration: none;
+    /*border-radius: 5px;*/
+    border-radius: 50px;
+    margin-top: 10px;
+    /*font-size: 50px;*/
+}
+
+
+nav button {
+    font-size: 11px;          /* taille du texte */
+    /*padding: 10px 15px;*/
+    padding: 5px 10px;
+    background-color: white;
+    color: #2f5d50;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #2f5d50;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #4a7c6a;
+}
+
+/* SECTIONS */
+section {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+}
+
+/* TITRES */
+h2 {
+    color: #2f5d50;
+}
+
+/* LISTES */
+ul {
+    padding-left: 20px;
+}
+
+/* GALERIE PHOTOS */
+.gallery {
+    /*display: flex;*/
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.gallery img {
+    width: 600px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.gallery img:hover {
+    /*transform: scale(1.05)*/;
+    transform: scale(1.50)
+}
+
+/* BOUTONS */
+.sidebar {
+    display: inline-block;
+    padding: 12px 20px;    
+    background-color: #2f5d50;
+    color: white;
+    text-decoration: none;
+    /*border-radius: 5px;*/
+    border-radius: 50px;
+    margin-top: 10px;
+    /*font-size: 100px;*/
+}
+
+.sidebar:hover {
+    background-color: #4a7c6a;
+}
+
+/* CONTACT */
+.contact p {
+    margin: 5px 0;
+}
+
+/* FOOTER */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* RESPONSIVE (mobile) */
+@media (max-width: 768px) {
+    .gallery img {
+        width: 100%;
+    }
+
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+
+
+
