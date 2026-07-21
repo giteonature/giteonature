@@ -121,18 +121,6 @@ header {
 }
 
 /*hm*/
-.logo2 {
-  background: url('saint-antonin-noble-val-le-soir.jpeg') center/cover;
-  height: 400px;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-shadow: 0 2px 8px black;
-}
-
-
-/*hm*/
 .logoGite {
   background: url('cuisine.jpg') center/cover;
   height: 400px;
@@ -158,25 +146,8 @@ header {
 	/*background: #2e6f40;*/
 	background-color: #333;
 	color: white;
+
 }
-
-
-
-.retour {
-    display: inline-block;
-    padding: 12px 20px;
-    background-color: #d4a373;
-    color: #333;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 8px;
-}
-
-.retour:hover {
-    background-color: #b5ffa3;
-}
-
-
 
 
 
