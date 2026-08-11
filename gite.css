@@ -11,7 +11,9 @@ body {
 
 /* CONTENEUR */
 .container {
-  max-width: 1100px;
+  width: 95%;
+  max-width: 1800px;
+  /*max-width: 1100px;*/
   margin: auto;
   padding: 10px;
 }
@@ -58,6 +60,13 @@ h2 {
  color: #b5ffa3;
 }
 
+h3 {
+  /*color: #2e6f40;*/
+  /*color: #39ff14;*/
+ color: #b5ffa3;
+}
+
+
 /* BLOCS (effet carte) */
 section {
   /*background: white;*/
@@ -76,6 +85,8 @@ section {
 /* GALERIE */
 .gallery {
   /*display: flex;*/
+  /*display: grid;*/
+  /*grid-template-columns: repeat(2, 1fr);*/
   flex-wrap: wrap;
   gap: 15px;
   /*justify-content: center;*/
@@ -92,6 +103,97 @@ section {
   /*transform: scale(1.05);*/
   transform: scale(1.50);
 }
+
+/* gallery-saint-antonin*/
+/* GALERIE */
+.gallery-saint-antonin {
+  /*display: flex;*/
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  flex-wrap: wrap;
+  gap: 15px;
+  /*justify-content: center;*/
+}
+
+.gallery-saint-antonin img {
+  /*width: 300px*/;
+  width: 600px;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.gallery-saint-antonin img:hover {
+  /*transform: scale(1.05);*/
+  transform: scale(1.50);
+}
+
+/*.gallery-saint-antonin {
+border: 5px solid red;
+}
+
+.gallery-saint-antonin > * {
+border: 3px solid yellow;
+}
+
+.gallery-saint-antonin {
+border: 3px solid red;
+}*/
+
+
+
+/* Gallery accueil */
+.gallery-accueil {
+  display: grid;
+  /*flex-wrap: wrap;*/
+  gap: 15px;  
+  grid-template-columns: repeat(1, 1fr);
+  /*grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));*/
+  /*width: 600px;*/
+  /*height: 100%;*/
+  /*overflow: hidden;*/
+  border-radius: 10px;
+}
+
+@media (min-width: 600px) { .gallery-accueil { grid-template-columns: repeat(2, 1fr); } }
+/*@media (min-width: 1024px) { .gallery-accueil { grid-template-columns: repeat(3, 1fr); } }*/
+
+
+/*.gallery-accueil {
+border: 5px solid red;
+}
+
+.gallery-accueil > * {
+border: 3px solid yellow;
+}
+
+.gallery-accueil {
+border: 3px solid red;
+}*/
+
+.gallery-accueil img {
+  width: 100%;
+ /*width: 600px;*/
+  /*height: 100%;*/
+  /*aspect-ratio: 4 / 3;*/
+  /*object-fit: cover;*/
+  object-fit: contain;
+  border-radius: 10px;
+  display: block;
+  transition: transform 0.3s ease, filter 0.3s ease; 
+}
+
+.gallery-accueil img:hover {
+  /*transform: scale(1.05);*/
+  transform: scale(1.50);
+}
+
+.gallery-accueil-item {
+  /*overflow: hidden;*/
+  border-radius: 10px;
+  /*aspect-ratio: 4 / 3;*/
+}
+
+
 
 /* TEXTE */
 p {
@@ -129,8 +231,8 @@ header {
   align-items: center;
   justify-content: center;
   text-shadow: 0 2px 8px black;
+  background-position: center 35%;
 }
-
 
 /*hm*/
 .logoGite {
@@ -176,7 +278,104 @@ header {
     background-color: #b5ffa3;
 }
 
+/* Gestion des photos */
 
+/* --- Styles globaux de la grille et des hovers (déjà présents précédemment) --- */
+.gallery-container {
+  display: grid;
+  gap: 8px;
+  padding: 10px;
+  background-color: #ffffff;
+  grid-template-columns: repeat(2, 1fr);
+}
+@media (min-width: 600px) { .gallery-container { grid-template-columns: repeat(5, 1fr); } }
+@media (min-width: 1024px) { .gallery-container { grid-template-columns: repeat(5, 1fr); } }
+
+.gallery-item {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: 6px;
+  cursor: pointer;  
+}
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  /*object-fit: cover;*/
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+.gallery-item:hover img { transform: scale(1.40); filter: brightness(1.1); }
+
+.last-item .overlay {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex; align-items: center; justify-content: center; text-align: center;
+  z-index: 1; transition: background-color 0.3s ease;
+}
+.last-item:hover .overlay { background-color: rgba(0, 0, 0, 0.4); }
+.last-item .overlay span { color: #ffffff; font-family: Arial, sans-serif; font-weight: bold; font-size: 14px; }
+
+/* --- Styles de la Lightbox mis à jour --- */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  align-items: center;
+  justify-content: center;
+ }
+
+.lightbox-content {
+  max-width: 80%; /* Réduit légèrement pour laisser de la place aux flèches */
+  max-height: 85%;
+  border-radius: 4px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  animation: zoomIn 0.25s ease;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.lightbox-content:hover {
+transform: scale(1.20);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 20px; right: 30px;
+  color: #ffffff; font-size: 40px; font-weight: bold;
+  cursor: pointer; transition: color 0.2s;
+}
+.lightbox-close:hover { color: #bbb; }
+
+/* Styles des flèches Gauche et Droite */
+.lightbox-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 35px;
+  padding: 20px;
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.2s, background-color 0.2s;
+  border-radius: 50%;
+}
+.lightbox-btn:hover {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.prev-btn { left: 20px; }
+.next-btn { right: 20px; }
+
+@keyframes zoomIn {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
 
 
 
